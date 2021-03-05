@@ -16,7 +16,7 @@ module.exports = {
   | interacting with SQL databases.
   |
   */
-  connection: Env.get('DB_CONNECTION', 'sqlite'),
+  connection: Env.get('DB_CONNECTION', 'mysql'),
 
   /*
   |--------------------------------------------------------------------------
@@ -78,4 +78,16 @@ module.exports = {
       database: Env.get('DB_DATABASE', 'adonis')
     }
   }
+
+  /*maria: {
+    client: 'mariasql',
+    connection: {
+      host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', ''),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis')
+    }
+    debug: true(1)
+  }*/
 }
